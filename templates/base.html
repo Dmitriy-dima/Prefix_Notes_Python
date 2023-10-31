@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}Note Manager{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="/add" {% if request.path == '/add' %}class="active"{% endif %}>Add Note</a>
+      <!-- Add more navigation links as needed -->
+      <form class="search" action="/search" method="GET">
+          <input type="text" name="query" class="search-input">
+          <button type="submit" class="search-button">Search</button>
+          <a href="/" {% if request.path == '/' %}class="active"{% endif %}>Clear</a>
+      </form>
+    </div>
+  </nav>  
+  <div class="container">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="flash-messages">
+      {% for message in messages %}
+      <div class="flash-message">{{ message }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

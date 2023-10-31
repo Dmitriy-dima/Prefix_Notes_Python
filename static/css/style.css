@@ -1,0 +1,152 @@
+/* Reset some default styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Add a background color for the body */
+}
+
+/* Navigation styles */
+nav {
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center; /* Center-align the entire navigation bar */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center; /* Center-align navigation links horizontally */
+  align-items: center; /* Center-align navigation links vertically */
+}
+
+.nav-container a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px; /* Add horizontal margin to navigation links */
+}
+
+/* Center-align the search form */
+.search {
+  display: flex;
+  align-items: center; /* Center vertically within the form */
+}
+
+/* Rest of the CSS remains the same */
+
+.search-input {
+  flex: 1;
+  max-width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.search-button:hover {
+  background-color: #555;
+}
+
+/* Container for centering content */
+.container {
+  max-width: 800px; /* Set a maximum width for the content */
+  margin: 0 auto; /* Center-align the container */
+  padding: 20px;
+}
+
+/* Note styles */
+.note {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.note-content {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Button styles */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.edit-button {
+  margin-left: auto;
+}
+
+.delete-form {
+  display: flex;
+}
+
+/* Form styles */
+form {
+  padding: 20px;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Flash message styles */
+.flash-messages {
+  margin-top: 20px;
+}
+
+.flash-message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #333;
+}

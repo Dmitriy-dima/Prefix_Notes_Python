@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Notes{% endblock %}
+{% block content %}
+<main>
+  <header>
+    <h1>Notes</h1>
+  </header>
+  <section class="notes">
+    {% if notes %}
+    {% for note in notes %}
+    <article class="note">
+      <div class="note-header">
+        <h2 class="note-title">{{ note.title }}</h2>
+        <a href="/edit/{{ note.id }}" class="button edit-button">Edit</a>
+        <form action="/delete/{{ note.id }}" method="post" class="delete-form">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" class="button delete-button">Delete</button>
+        </form>
+      </div>
+      <p class="note-content">{{ note.content }}</p>
+    </article>
+    {% endfor %}
+    {% else %}
+    <p>No notes available.</p>
+    {% endif %}
+</section>
+</main>
+{% endblock %}

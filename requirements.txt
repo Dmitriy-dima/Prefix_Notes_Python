@@ -1,0 +1,17 @@
+Flask
+SQLAlchemy
+Flask-SQLAlchemy
+flask-migrate
+Flask-WTF
+WTForms
+Flask-Bootstrap
+Flask-Login
+Flask-Mail
+Flask-Security
+pytest
+Jinja2
+alembic
+python-decouple
+requests
+markupsafe
+python-dotenv
